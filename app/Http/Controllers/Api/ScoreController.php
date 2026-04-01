@@ -20,4 +20,9 @@ class ScoreController extends Controller
 
         return response()->json(['message' => 'Score saved successfully!', 'data' => $score]);
     }
+    public function index()
+    {
+        // Gets all scores, highest score first
+        return response()->json(Score::orderBy('score', 'desc')->get());
+    }
 }

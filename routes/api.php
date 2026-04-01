@@ -10,3 +10,4 @@ use App\Http\Controllers\Api\ScoreController;
 // Your API Routes
 Route::get('/questions', [QuestionController::class, 'index']);
 Route::post('/scores', [ScoreController::class, 'store']);
+Route::get('/scores', [ScoreController::class, 'index']);
