@@ -16,6 +16,7 @@ public function up(): void
             $table->string('player_name'); // To show on the final screen/leaderboard
             $table->integer('score'); // How many they got right
             $table->integer('total_questions'); // Always 6 in this case
+            $table->integer('time_taken')->default(0); // Elapsed time in seconds
             $table->timestamps();
         });
     }

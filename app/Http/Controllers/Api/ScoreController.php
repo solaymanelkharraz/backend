@@ -14,6 +14,7 @@ class ScoreController extends Controller
             'player_name' => 'required|string',
             'score' => 'required|integer',
             'total_questions' => 'required|integer',
+            'time_taken' => 'required|integer',
         ]);
 
         $score = Score::create($request->all());
@@ -22,7 +23,7 @@ class ScoreController extends Controller
     }
     public function index()
     {
-        // Gets all scores, highest score first
-        return response()->json(Score::orderBy('score', 'desc')->get());
+        // Gets all scores, lowest time first
+        return response()->json(Score::orderBy('time_taken', 'asc')->get());
     }
 }

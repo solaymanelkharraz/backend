@@ -51,10 +51,57 @@ class QuestionSeeder extends Seeder
                 'option_b' => 'Let them finish, then calmly chime in to add technical details, saying "As we discussed when I drafted this..."',
                 'correct_answer' => 'B',
                 'feedback' => 'Unprofessional! Yelling in the meeting made you look hostile and derailed the entire presentation.'
+            ],
+            [
+                'scenario' => 'The Interruption: You are in a meeting and a colleague keeps interrupting you while you present your web architecture.',
+                'option_a' => 'Roll your eyes, look visibly annoyed, and snap at them for interrupting you.',
+                'option_b' => '"I hear your point, let me just finish this thought so we have the full context."',
+                'correct_answer' => 'B',
+                'feedback' => 'Professionalism lost! Reacting with visible annoyance damages your reputation more than the interruption.'
+            ],
+            [
+                'scenario' => 'The Morale Drop: Your team is demotivated because the React project is falling behind schedule.',
+                'option_a' => 'Force everyone to work mandatory overtime this weekend until it is done.',
+                'option_b' => 'Hold a quick stand-up to identify blockers and offer your support to the person struggling most.',
+                'correct_answer' => 'B',
+                'feedback' => 'Authority trap! Forcing overtime without support leads to burnout and more bugs.'
+            ],
+            [
+                'scenario' => 'The Panic Room: You hit a critical bug in production. Your team is stuck in "Red Hat" (emotional) panic mode.',
+                'option_a' => 'Join the panic, assume the worst, and start changing code randomly to fix it.',
+                'option_b' => 'Switch the team to "White Hat" mode by asking, "What are the objective facts we have right now?"',
+                'correct_answer' => 'B',
+                'feedback' => 'Logic failure! Panic doesn\'t fix code. Objective data does.'
+            ],
+            [
+                'scenario' => 'The Tech War: Two developers are arguing over using Tailwind or Bootstrap, stalling the project.',
+                'option_a' => 'Take the side of the developer you like more and tell the other to drop it.',
+                'option_b' => 'Ask both to present a 1-minute "Pro/Con" list based on project requirements.',
+                'correct_answer' => 'B',
+                'feedback' => 'Bias alert! Picking sides without a framework creates long-term resentment.'
+            ],
+            [
+                'scenario' => 'The Scope Creep: You are a freelancer. A client asks for a massive new feature that wasn\'t in the original contract.',
+                'option_a' => 'Agree to do it for free just so they don\'t get angry or leave a bad review.',
+                'option_b' => 'Politely explain this is a change of scope and provide an updated quote for the extra hours.',
+                'correct_answer' => 'B',
+                'feedback' => 'Revenue loss! Working for free devalues your time and sets a dangerous precedent.'
+            ],
+            [
+                'scenario' => 'The Resistance: The company is switching from PHP to Node.js. Many senior devs are resisting the change.',
+                'option_a' => 'Tell them they need to adapt or risk losing their jobs to younger developers.',
+                'option_b' => 'Organize a "Knowledge Exchange" where seniors can see how their logic applies to the new tech.',
+                'correct_answer' => 'B',
+                'feedback' => 'Resistance! People fear what they don\'t understand. Empathy is the key to change.'
+            ],
+            [
+                'scenario' => 'The Burnout: You have been coding for 14 hours straight, ignoring your family, health, and sleep.',
+                'option_a' => 'Drink a 4th energy drink and push through the pain to hit the commit milestone.',
+                'option_b' => 'Close the laptop. You realize that "Growth" and "Health" pillars are currently at zero.',
+                'correct_answer' => 'B',
+                'feedback' => 'Imbalance! If one pillar collapses, the whole structure of your life falls with it.'
             ]
-        ];
-
-        foreach ($questions as $q) {
+        ];        foreach ($questions as $q) {
             Question::create($q);
         }
     }
